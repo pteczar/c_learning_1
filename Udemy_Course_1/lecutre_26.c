@@ -1,4 +1,9 @@
 //enum challenge
+
+/* 
+Author: Przemek
+Purpose: Challenge
+*/
 #include <stdio.h>
 
 int main(int argc, char const *argv[])
