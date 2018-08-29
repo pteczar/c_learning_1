@@ -2,10 +2,11 @@
 
 int main(int argc, char const *argv[])
 {
-    int przemek = 5;
+ 
+ float przemek = 23.22;
+ double przemek2 = 55.234234234242456e+11;
+ _Bool boolVariable = 1;
 
-    przemek = 8;
 
-    
     return 0;
 }
