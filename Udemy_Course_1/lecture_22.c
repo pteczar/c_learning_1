@@ -5,8 +5,8 @@ int main(int argc, char const *argv[])
     double a, b, perimeter, area;
 
 
-    a = 5.8;
-    b = 10.9;
+    a = 5.8; //width
+    b = 10.9; //height
     perimeter = a+a+b+b;
     area = a*b;
 
