@@ -1,5 +1,5 @@
 /* Converting number of minutes to days and years
-minutes can be int
+minutes can be int but I decide for double
 the rest double
 */
 #include <stdio.h>
