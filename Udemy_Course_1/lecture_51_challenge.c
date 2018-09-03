@@ -8,31 +8,38 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define N 100
-
-int main(int argc, char const *argv[])
+int main()
 {
-    
-  int  primes[100] = {1,2};
-  int p, i, primeIndex, isPrime;
-for( p = 3; p<=100; p+= 2 ) // odd numbers this is why +2
-{
-    isPrime = 1; // assumption that the number is prime
-    for ( i =1, i < primeIndex; ++i)
+    int p;
+    int i;
 
-    if(p % primes[i] == 0)
-    isPrime = 0;
-}  
-if( isPrime == 1)
- primes[primeIndex] = p;
- ++primeIndex
+    int primes[50] = {0};
+    int primeIndex = 2;
 
+    bool isPrime;
 
+    // hardcode prime numbers
+    primes[0] = 2;
+    primes[1] = 3;
 
+    for(p = 5; p <= 100; p = p + 2)
+    {
+        isPrime = true;
 
+        for (i = 1; isPrime && p / primes[i] >= primes[i]; ++i)
+            if (p % primes[i] == 0)
+                isPrime = false;
+
+        if (isPrime == true)
+        {
+            primes[primeIndex] = p;
+            ++primeIndex;
+        }
+    }
 
     for ( i = 0;  i < primeIndex;  ++i )
          printf ("%i  ", primes[i]);
 
+    printf("\n");
     return 0;
 }
