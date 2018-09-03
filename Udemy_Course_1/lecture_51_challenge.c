@@ -5,6 +5,8 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 #define N 100
 
@@ -29,6 +31,8 @@ if( isPrime == 1)
 
 
 
+    for ( i = 0;  i < primeIndex;  ++i )
+         printf ("%i  ", primes[i]);
 
     return 0;
 }
