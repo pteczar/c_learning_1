@@ -36,7 +36,7 @@
 
        };
         int i, j;
-        float sumYear = 0.0, sumMonth = 0.0, averageYear, averageMonth;
+        float sumYear, sumMonth, averageYear, averageMonth;
 
 
 // calculate the sum and average on the row
@@ -55,15 +55,17 @@
                 printf("Sum Year %f = Average year  %f\n", sumYear, averageYear);
     }
 
-      for(i = 0; i < 4; i++)
+   
+   
+            for(i = 0; i < 4; i++)
   {
-      sumMonth = sumMonth + rainfall[i][0]; // if I change 0 to i does not print :( do not know why
+                 sumMonth = sumMonth + rainfall[i][0]; // if I change 0 to i does not print :( do not know why
                           
     }
-      for (j =0; j < 12 ; j++)
+                        for (j =0; j < 12 ; j++)
     {
-                averageMonth = sumMonth / 4;
-                printf("Sum Month %f = Average Month  %f\n", sumMonth, averageMonth);
+                              averageMonth = sumMonth / 4;
+                              printf("Sum Month %f = Average Month  %f\n", sumMonth, averageMonth);
     }
 
   
