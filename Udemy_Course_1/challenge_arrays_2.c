@@ -36,7 +36,7 @@
 
        };
         int i, j;
-        float sumYear, sumMonth, averageYear, averageMonth;
+        float sumYear = 0.0, sumMonth = 0.0, averageYear, averageMonth;
 
 
 // calculate the sum and average on the row
@@ -46,8 +46,7 @@
   
          for(j = 0; j < 12; j++)
   {
-      sumYear = sumYear + rainfall[0][j]; // if I change 0 to i does not print :( do not know why
-                          
+      sumYear = sumYear + rainfall[0][j]; // if I change 0 to i does not print :( do not know why              
     }
       for (i = 0; i < 4 && averageYear ; i++)
     {
