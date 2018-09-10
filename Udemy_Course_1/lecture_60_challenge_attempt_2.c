@@ -12,11 +12,53 @@ int main(int argc, char const *argv[])
 {
     /* I will test the code here */
 
-    GCD (42, 56, 1, 1);
 
-    ABS(-54);
+    float  f1 = -15.5, f2 = 20.0, f3 = -5.0;
+    int    i1 = -716;
+    float absoluteValueResult = 0.0;
 
-    SROOT (-5.0);
+   // GCD (42, 56, 1, 1);
+
+   // ABS(-54);
+
+    //SROOT (-5.0);
+
+// Testing SROOT
+
+    printf("%.2f\n", SROOT(-3.0));
+    printf("%.2f\n", SROOT(16.0));
+    printf("%.2f\n", SROOT(25.0));
+    printf("%.2f\n", SROOT(9.0));
+    printf("%.2f\n", SROOT(225.0));
+
+
+// Testing ABS
+
+    absoluteValueResult = ABS (f1);
+    printf ("result = %.2f\n", absoluteValueResult);
+    printf ("f1 = %.2f\n", f1);
+
+    absoluteValueResult = ABS (f2) + ABS (f3);
+    printf ("result = %.2f\n", absoluteValueResult);
+
+    absoluteValueResult = ABS ( (float) i1 );
+    printf ("result = %.2f\n", absoluteValueResult);
+
+    absoluteValueResult = ABS (i1);
+    printf ("result = %.2f\n", absoluteValueResult);
+
+    printf ("%.2f\n\n\n\n", ABS (-6.0) / 4 );
+
+// Testing GDC
+
+    int result = GCD(150, 35, 1 ,1);
+    printf("The gcd of 150 and 35 is %d\n", result);
+
+    result = GCD(1026, 405,1 ,1);
+    printf("The gcd of 1026 and 405 is %d\n", result);
+
+    printf("The gcd of 83 and 240 is %d\n\n\n\n", GCD(83, 240,1 ,1));
+
 
     return 0;
 }
@@ -51,7 +93,7 @@ float ABS (float number)
  return number;
 }
 
-//Sroot algorithm 
+//SROOT algorithm 
 
 float SROOT (float x)
 {
