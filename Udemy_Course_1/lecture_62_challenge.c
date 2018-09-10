@@ -12,6 +12,13 @@ TIC TAC TOE game
 + markBoard - sets the char array with a selection and check for an invalid selection
 
 
+how to print the board / grid?
+how to input data into the grid?
+
+loops for checking and drawing new grid after each move
+checking if the value is correct
+
+how to check positions on x and o?
 
 
 
