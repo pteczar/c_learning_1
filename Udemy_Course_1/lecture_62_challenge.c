@@ -3,7 +3,7 @@
 /* 
 TIC TAC TOE game
 - 2 players
-- use an array 10 elements ingle dimension (do not use 0)
+- use an array 10 elements ingle dimension (do not use 0) we will use 9 elements as the grid 
 - each element of the array represent coordinates on the board
 - display 3x3 grid
 - some function I will need
