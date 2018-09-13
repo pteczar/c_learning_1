@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /* 
 TIC TAC TOE game
 - 2 players
@@ -19,22 +17,4 @@ loops for checking and drawing new grid after each move
 checking if the value is correct
 
 how to check positions on x and o?
-
-
-
-
-
 */
-
-
-
-
-int main(int argc, char const *argv[])
-{
-    /* code */
-
-
-
-
-    return 0;
-}

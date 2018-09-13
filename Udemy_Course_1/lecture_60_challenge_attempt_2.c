@@ -19,12 +19,10 @@ int main(int argc, char const *argv[])
 
    // GCD (42, 56, 1, 1);
 
-    ABS(-54);
+   // ABS(-54);
 
-    SROOT (-5.0);
+    //SROOT (-5.0);
 
-    printf("%.2f\n", SROOT (-5.0));
-/*
 // Testing SROOT
 
     printf("%.2f\n", SROOT(-3.0));
@@ -61,7 +59,7 @@ int main(int argc, char const *argv[])
 
     printf("The gcd of 83 and 240 is %d\n\n\n\n", GCD(83, 240,1 ,1));
 
-*/
+
     return 0;
 }
 // GCD  algorithm
