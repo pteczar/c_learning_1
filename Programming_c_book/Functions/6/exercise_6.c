@@ -4,7 +4,7 @@
 
 
 // absolute number function
-float absoluteValue (float x)
+float absoluteValue (double x)
 {
     if ( x < 0)
     x = -x;
@@ -14,10 +14,10 @@ float absoluteValue (float x)
 
 // Function to compute the square root of a number
 
-float squareRoot (float x)
+double squareRoot (double x)
 {
-    const float epsilon = .00001;
-    float guess = 1.0;
+    const double epsilon = 0.0000000000001;
+    double guess = 1.0;
 
     while(absoluteValue (guess * guess - x) >= epsilon)
     guess = ( x / guess + guess) / 2;

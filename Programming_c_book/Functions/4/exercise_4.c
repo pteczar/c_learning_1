@@ -20,15 +20,20 @@ float squareRoot (float x)
     float guess = 1.0;
 
     while(absoluteValue (guess * guess - x) >= epsilon)
+    {
     guess = ( x / guess + guess) / 2;
-
+        printf("the number of guess %f\t \n", guess);
+    }
+    
     return guess;
+
 
 }
 
 int main(int argc, char const *argv[])
 {
-    printf("squareRoot (2.0) = %f\n", squareRoot(77.0));
+    printf("squareRoot (77.0) = %f\n", squareRoot(77.0));
+  
 
     return 0;
 }
