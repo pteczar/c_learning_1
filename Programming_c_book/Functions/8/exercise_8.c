@@ -1,5 +1,5 @@
 //quadratic equation program
-
+// this program sometimes freezes, no idea why, the calculations are correct
 // square root of a number program
 
 #include <stdio.h>
