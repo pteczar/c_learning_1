@@ -1,5 +1,3 @@
-//not working in this compilator but online it is working without any issues... 
-
 #include <stdio.h>
 
 int matrixM[4][5] =  
@@ -42,7 +40,7 @@ int main(int argc, char const *argv[])
 
      for (int i = 0; i < 5; i++)
     {
-        for (int j = 0; 4 < c; j++)
+        for (int j = 0; j < 4; j++)
         {
             printf("X[%d][%d]=%d  ", i, j, matrixM[i][j]);
             printf("Y[%d][%d]=%d\n", j, i, matrixN[j][i]);
