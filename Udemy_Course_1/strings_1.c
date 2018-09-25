@@ -64,7 +64,21 @@ strcpy() and strncpy() - copying one character string to another
 strcat() and strncat() - combining the character 
 strcmp() and strncmp() - check if they functions are equal
 
+strchr() and strstr() - searching string 
+tokenizing a string strtok() - example this_is_jason - this - tokem , is - token, jason - token
 
+analyzing strings islower(), isupper(), isdigit(), 
 
+pointers a bit about that:
 
+int Number = 25;
+int *pNumber = &Number;
 
+string functions will return pointers and this is why we need to understand the concept
+
+//converting strings
+
+lower or upper case:
+
+toupper()
+tolower()
