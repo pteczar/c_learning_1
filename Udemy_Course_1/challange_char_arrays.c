@@ -9,22 +9,34 @@
 
 2. write a function to concatenate two character strings / do not use the strcat library /
  - function should take three paramaters
- - char result[]
+ - char result[] - character string that you store
  - const char str1[]
  - const char str[2]
  - can return void
 
- 3. Write a function to compare two strings / do not user strcmp library /
+ 3. Write a function to compare two strings / do not use strcmp library /
   - function should take two const char arrays as paramaeters and return boolean of true if they are equal and false if otherwise
   */
  int main(int argc, char const *argv[])
  {
       void counter (char text[]);
+      void concatenate ( char str1[], char str2[]);
+      int compare (char str1[], char str2[]);
      
-     counter ("Przemek");
+     char str1[100] = "same";
+     char str2[100] = "same";
+    
+     
+ 
+    counter ("Przemek");
+    concatenate (str1, str2);
+    printf("\nString obtained on concatenation: \"%s\"\n", str1);
+    printf("%d",compare(str1,str2));
+   
 
 
      return 0;
+
  }
  
 
@@ -42,3 +54,41 @@
     printf("%d",count);
 
  }
+
+ void concatenate ( char str1[], char str2[])
+ {
+     
+     int i = 0;
+     int j = 0;
+
+     while (str1[i] != '\0' )
+     {
+         i++;
+     }
+   while (str1[j] != '\0')  
+   { 
+        str1[i] = str2[j];
+         i++;
+         j++;
+     }
+     str1[i] = '\0';
+ }
+
+ int compare(char str1[],char str2[])
+{
+    int i,outcome = true;
+    for(i=0; str1[i]!='\0' || str2[i]!='\0'; i++) {
+        if(str1[i] != str2[i]) {
+            outcome = false;
+            break;
+        }
+    }
+    return outcome;
+}
+   
+   
+ 
+
+
+
+ 
