@@ -35,15 +35,15 @@ int main(int argc, char const *argv[])
     reverse(s);
   
     printf("Strings in unsorted order are : "); 
-    for (int i=0; i<n; i++) 
-        printf("\n String %d is %s", i+1, arr[i]); 
+    for (int i= 0; i < n; i++) 
+        printf("\n String %d is %s", i + 1, arr[i]); 
         printf("\n\n");
 
     displaySort(arr, n); 
   
     printf("Strings in sorted order are : "); 
-    for (int i=0; i<n; i++) 
-        printf("\n String %d is %s", i+1, arr[i]); 
+    for (int i = 0; i < n; i++) 
+        printf("\n String %d is %s", i + 1, arr[i]); 
     return 0; 
 } 
 
