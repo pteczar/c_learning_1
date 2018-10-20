@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 {
 int stringLength ( const char string[]);
 
-const char word1[] = "Przemek";
+const char word1[] = "Przemek i dupa";
 const char word2[] = "is";
 const char word3[] = "bored";
 
