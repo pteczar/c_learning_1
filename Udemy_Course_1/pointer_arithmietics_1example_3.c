@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])  
 {
     int i;
     long multiple[] = {15L, 25L, 35L, 45L};
