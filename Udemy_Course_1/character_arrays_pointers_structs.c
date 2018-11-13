@@ -1,8 +1,5 @@
 #include <stdio.h>
 
-int main(int argc, char const *argv[])
-{
-    
 void getinfo(struct namect *pst)
 {
     char temp[SLEN];
@@ -20,8 +17,12 @@ void getinfo(struct namect *pst)
  pst->lname = (char *) malloc(strlen(temp)+1);
  strcpy(pst->lname, temp);  
 
-
 }
+
+int main(int argc, char const *argv[])
+{
+    
+
 
     return 0;
 }
