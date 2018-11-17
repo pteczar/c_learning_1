@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 
     struct employee emp2;
 
-    scanf("%s", &emp2.name );
+    scanf("%s", emp2.name );
     printf("\nMonth of hire: ");
       scanf("%d", &emp2.hireDate );
       printf("\nSalary: ");
