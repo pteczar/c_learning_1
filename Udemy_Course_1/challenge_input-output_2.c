@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
      //creating the file
     FILE *myFile = NULL;
     char chars[BUFFER];
-
+    int change;
     //opening the file for writing 
     myFile = fopen("jasons_challenge_2.txt", "w+");
 
@@ -37,20 +37,35 @@ int main(int argc, char const *argv[])
 
     //copying the content of a file to another file
   
-    while (chars[BUFFER] = fgetc(myFile)) != EOF) 
+    while (fgetc(myFile) != EOF) 
     { 
         fputs(chars, myTempFile); 
-        chars = fgetc(myFile); 
+        chars[BUFFER] = fgetc(myTempFile); 
     } 
 
-  printf("The String in the created temp file: %s\n", chars);
-   
-    //changing the character to uppercase
+  printf("The lowercase string in the created temp file: %s\n", chars);
+
+    //closing the first file
+    fclose(myFile); 
+
+    //changing the character to uppercase NOT WORKING!!!
+    while (fgetc(myTempFile) != EOF) 
+      if ((chars[BUFFER] >= 'a') && (chars[BUFFER] <= 'z'))
+      chars[BUFFER] = fgetc(myTempFile); 
+    { 
+       chars[BUFFER] = chars[BUFFER] - 32;
+       fseek(myTempFile,-1,SEEK_CUR);
+                fputc(chars[BUFFER],myTempFile);
+           } 
+    
+    printf("The UPPERCASE string in the created temp file: %s\n", chars);
 
 
-
-    //closing the file
-    fclose(myFile); // close the file
+  
+        
+            
+             
+        
 
 
 
