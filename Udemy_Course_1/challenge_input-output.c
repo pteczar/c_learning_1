@@ -32,9 +32,13 @@ int main(int argc, char const *argv[])
 {
 
 
-    while ((chars = fgetc(pointerToFile)) != EOF);
+    while ((chars = fgetc(pointerToFile)) != EOF)
+    {
     if( chars == '\n' && lines > 0)
+
     lines++;
+
+    }
 }
     else // else end with -1
     return -1;
