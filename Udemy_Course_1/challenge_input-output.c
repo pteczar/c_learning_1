@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
     while ((chars = fgetc(pointerToFile)) != EOF)
     {
     if( chars == '\n' && lines > 0)
-
+    printf("just read in character %c\n", chars);
     lines++;
 
     }
