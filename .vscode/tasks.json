@@ -5,7 +5,7 @@
             "label": "debug",
             "type": "shell",
             "command": "",
-            "args": ["g++","-g", "${relativeFile}", "-o","a.exe"]
+            "args": ["g++","-g", "${relativeFile}", "-o","a.out"]
         },
         {
             "label": "Compile and run",
