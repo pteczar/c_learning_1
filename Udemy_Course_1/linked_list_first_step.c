@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <alloca.h>
+//this program is working but using a GCC not G++ compiler
 int main(int argc, char const *argv[])
 {
 struct node
@@ -30,7 +31,11 @@ three->next = NULL;
 head = one;
 
 //https://www.programiz.com/dsa/linked-list
+printf("one = %i\n",one->data);
+printf("two = %i\n" ,one->next->data);
+printf("three = %i\n",two->next->data);
 
 
     return 0;
 }
+
