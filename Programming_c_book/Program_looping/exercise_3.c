@@ -6,10 +6,10 @@ int main(int argc, char const *argv[])
 
     for(i = 1; i <= 10; i++)
     {
-            factorial = 1;
+            factorial = 1; // why?
       
 
-        for (n = 1; n <= i; n++ )
+        for (n = 1; n <= i; n++ ) // connect two for loops
         
     
         factorial = factorial*n;
