@@ -19,7 +19,9 @@
      for ( i = 1;  i <= numberOfGrades;  ++i ) 
      {
          printf ("Enter grade #%i: ", i);
-         scanf ("%i", &grade);gradeTotal = gradeTotal + grade;
+         scanf ("%i", &grade);
+         
+         gradeTotal = gradeTotal + grade;
          
          if ( grade < 65 )
          
