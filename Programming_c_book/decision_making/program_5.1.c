@@ -1,6 +1,4 @@
 // Program to calculate the absolute value of an integer
-
-
  #include <stdio.h>
  
   int main (void)
