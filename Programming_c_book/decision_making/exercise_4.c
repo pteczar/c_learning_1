@@ -2,7 +2,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int number, right_digit = 0;
+    int number, right_digit = 0 ;
 
     printf("Enter your number.\n");
     scanf("%i", &number);
@@ -10,11 +10,12 @@ int main(int argc, char const *argv[])
 
         do
         {
-            right_digit = number % 10;
-            printf("%i", right_digit);
+            right_digit = right_digit * 10;
+            right_digit = right_digit + (number % 10);
             number = number / 10;
         }
         while (number != 0);
+        printf("%i", right_digit);
         printf("\n");
 
     return 0;
