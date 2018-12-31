@@ -10,7 +10,8 @@ int main()
  for(i = 2; i < 15; ++i)//loop starts from 2 because 0 and 1 are already printed    
  {    
   n3 = n1 + n2;    
-  printf(" %d", n3);    
+  printf(" %d", n3);  
+
   n1 = n2;    //why?
   n2 = n3;    //why?
  }  
