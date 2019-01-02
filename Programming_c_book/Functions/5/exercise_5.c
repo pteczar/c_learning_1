@@ -30,7 +30,7 @@ float squareRoot (float x)
 
 int main(int argc, char const *argv[])
 {
-    printf("squareRoot (2.0) = %f\n", squareRoot(2.0));
+    printf("squareRoot (2.0) = %f\n", squareRoot(4.0));
 
     return 0;
 }
