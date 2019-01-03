@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
- float  absoluteValue (float x) 
+ double  absoluteValue (double x) 
  
 {
      if ( x < 0 )x = -x;
@@ -13,10 +13,10 @@
 
 // Function to compute the square root of a number 
 
-float  squareRoot (float x) 
+double  squareRoot (double x) 
 
 {
-    const float  epsilon = .00001;
+    const double  epsilon = 0.00001;
     
     float        guess = 1.0;
     
