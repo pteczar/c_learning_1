@@ -14,6 +14,14 @@ int x_to_the_n (int x, int n)
 {
    long int result = 1;
    
+   if (n <0)
+   {
+   printf("You are not allowed to use int < ");
+     return 0;
+   }
+    else if (n > 0)
+{
+
    while (n != 0)
     {
         result *= x;
@@ -21,7 +29,7 @@ int x_to_the_n (int x, int n)
     }
 
 
-
+}
 
 return result;
 }
