@@ -2,10 +2,16 @@
 
 #include <stdio.h>
 
+int nRows = 3;
+int nCols = 5;
+
+
+void scalarMultiply (int nRows, int nCols, int matrix[nRows][nCols], int scalar);
+void displayMatrix (int nRows, int nCols, int matrix[nRows][nCols]);
+
 int main(void)
 {
-    void scalarMultiply (int nRows, int nCols, int matrix[nRows][nCols], int scalar);
-    void displayMatrix (int nRows, int nCols, int matrix[nRows][nCols]);
+    
 
     int sampleMatrix[3][5] = 
     {
