@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-//does not work properly
+//does not work properly finish the date update
 
 struct time timeUpdate (struct time now);
 struct date dateUpdate (struct date today);
@@ -29,7 +29,7 @@ struct dateAndTime
 
 struct dateAndTime  dt1 =
      {
-         { 23, 59, 59 }, { 1, 11, 19 }
+         { 1, 11, 19 }, { 00, 00, 00 }
      };
 
 bool  isLeapYear (struct date  d);
@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
     dt1 = clockKeeper (dt1);
 
     printf ("Updated date and time is %.2i/%.2i/%.2i "
-	    "%.2i:%.2i:%.2i\n\n",
+	    "%.2i:%.2i:%.2i\n\n", 
 	    dt1.sdate.month, dt1.sdate.day, dt1.sdate.year,
 	    dt1.stime.hour, dt1.stime.minutes, dt1.stime.seconds);
 }
