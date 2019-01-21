@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-//does not work properly finish the date update
+//does not work properly issues with - the date update
+//Program to update date and time
 
 struct time timeUpdate (struct time now);
 struct date dateUpdate (struct date today);
@@ -29,7 +30,7 @@ struct dateAndTime
 
 struct dateAndTime  dt1 =
      {
-         { 1, 11, 19 }, { 00, 00, 00 }
+         { 1, 11, 19 }, { 23, 59, 59 }
      };
 
 bool  isLeapYear (struct date  d);
@@ -51,28 +52,18 @@ int main(int argc, char const *argv[])
 
 struct dateAndTime  clockKeeper (struct dateAndTime  dt)
 {
-     struct time  timeUpdate (struct time  now);
-     struct date  dateUpdate (struct date  today);
+     
 
      dt.stime = timeUpdate (dt.stime);
-
+//looks like this is not working :(
 	if ( dt.stime.hour == 0  &&  dt.stime.minutes == 0  &&
              dt.stime.seconds == 0 )
 	     dt.sdate = dateUpdate (dt.sdate);
 
-   	return  dt;
+        return  dt;
 }
 
-    /* if the time is 00:00:00 
-    call date update and update the date by adding 1
-
-    return dateAndTime
-
-    */
- 
-
-
-
+  //counting time
 struct time timeUpdate (struct time now)
 {
     ++now.seconds;
@@ -103,7 +94,7 @@ return now;
 struct date dateUpdate (struct date today)
 {
     struct date tomorrow;
-    int numberOfDays (struct date d);
+    
 
     if(today.day != numberOfDays (today))
     {
