@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
+bool alphabetic (const char c);
+bool numeric (const char c);
 
 int main(int argc, char const *argv[])
 {
@@ -43,16 +45,29 @@ bool alphabetic (const char c)
         
 }
 
+bool numeric (const char c)
+{
+    if ((c >= '0') || ( c <= '9'))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+    
+}
+
 //function to count words in a string
 
-int countWords (const char string[])
+int countWords (const char string[])  //rewrite and use  numeric & alphabetic string + if (if(str[i] == ' ' || str[i] == '\n' || str[i] == '\t' || stri[i] == '\''))
 {
     int i, wordCount = 0;
     bool lookingForWord = true, alphabetic (const char c);
 
-    for(size_t i = 0; string[i] != '\0' && string[i] != '\''; i++) //what more, is this the correct place?
+    for(i = 0; string[i] != '\0'; i++) 
     {
-        if (alphabetic (string[i]))
+        if (alphabetic (string[i])) // || numeric(string[i]) 
         {
             if (lookingForWord) 
             {
@@ -88,3 +103,4 @@ void readLine (char buffer[])
     buffer[i -1] = '\0';
     
 }
+
