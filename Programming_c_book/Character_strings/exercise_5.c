@@ -23,8 +23,8 @@ int findString (char motherArgument[], char childArgument[]) // is child inside 
     if(motherArgument[i] == childArgument[i])
     {
         i++;
-		printf("Both the strings are equal");
-        return i;
+	
+        return 1;
 	}
 	else
 	{
