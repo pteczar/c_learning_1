@@ -1,8 +1,7 @@
 #include<stdio.h>
-
+#include <string.h>
 
 int insertString(char[],char[],int);
-int stringLength(char[]);
 int main()
 {
 
@@ -19,9 +18,9 @@ int main()
 int insertString(char a[],char b[],int pos)
 {
 
-  int i = 0,j = 0;
-  int lengthA = stringLength(a);
-  int lengthB = stringLength(b);
+  int i = 0;
+  int lengthA = strlen(a);
+  int lengthB = strlen(b);
 
   if(pos > lengthA)
     return -1;
@@ -33,11 +32,4 @@ int insertString(char a[],char b[],int pos)
       a[i + pos] = b[i];
 
   return 1;
-}
-int stringLength(char x[])
-{
-  int length=0;
-  while(x[length]!='\0')
-    length++;
-  return length;
 }

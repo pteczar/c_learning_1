@@ -11,7 +11,8 @@ int main(int argc, char const *argv[])
 
     if (index != -1)
     {
-      //  printf("%s\n", string + index);
+       // printf("%s\n", string + index);
+        printf("string = %s\n", string);
         printf("The starting position is %d", index);
     }
     return 0;

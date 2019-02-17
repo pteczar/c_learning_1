@@ -4,15 +4,15 @@ stored inside the text array after the function returned. */
 #include <stdio.h>
 #include <string.h>
 
-int insertString (char source[], char insert[], int position );
+int insertString(char a[],char b[],int pos);
 int main(int argc, char const *argv[])
 {
     char source[50] = "the wrong son";
     char insert[50] = "per";
     int position = 10;
    
-    printf("source length = %ld\n",strlen(source));
-    printf("insert length = %ld\n",strlen(insert));
+   // printf("source length = %ld\n",strlen(source));
+  //  printf("insert length = %ld\n",strlen(insert));
 
     
 
@@ -26,21 +26,21 @@ int main(int argc, char const *argv[])
     
     }
 
-int insertString (char source[], char insert[], int position )
+int insertString(char a[],char b[],int pos)
 {
-    int i = 0;
-       
-      int lengthA = strlen(source);
-      int lengthB = strlen(insert);
 
-    if(position > lengthA)
-        return -1;
+  int i = 0;
+  int lengthA = strlen(a);
+  int lengthB = strlen(b);
 
-    for( i = lengthA; i >= position; --i)
-        source[i + lengthB] = insert[i];
-    
-    for(i = 0; i < lengthB; ++i)
-        source[i + position] = insert[i];
+  if(pos > lengthA)
+    return -1;
 
-        return 1;
-} 
+  for(i= lengthA; i >= pos; i--)
+      a[i + lengthB] = a[i];
+
+  for ( i = 0; i < lengthB; ++i )
+      a[i + pos] = b[i];
+
+  return 1;
+}
