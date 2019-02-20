@@ -3,7 +3,7 @@
 
 #define ENTRIES 11
 
-int dicionarySort ( struct entry dictionary[], const int entries );
+int dicionarySort ( struct entry dictionary[], int entries );
 
 struct entry
 {
@@ -11,10 +11,10 @@ struct entry
     char definition[100];
 };
 
- const struct entry dictionary[100] = 
+  struct entry dictionary[100] = 
     {
     
-    { "aardvark", "a burrowing African mammal"        },
+    { "aardvark","a burrowing African mammal"        },
     { "ahoy",     "a nautical call of greeting"       },
     { "affix",    "to append; attach"                 },
     { "addle",    "to become confused"                },
@@ -36,17 +36,17 @@ int main(int argc, char const *argv[])
           printf("Dictionary before sorting:\n");
 
     for ( i = 0; i < entries; ++i )
-        printf("Word: \"%s\" \t Definition: \"%s\"\n", dictionary[i].word, dictionary[i].definition );
+        printf("Word: \"%s\"\t  Definition: \"%s\"\n", dictionary[i].word, dictionary[i].definition );
 
         printf("\nDictionary after sorting:\n");
        
-         dicionarySort(dictionary[i].word, entries); // why there is a problem with entries?
-         dicionarySort(dictionary[i].definition, entries);// why there is a problem with entries?
+         dicionarySort(dictionary, entries); 
+         dicionarySort(dictionary, entries);
 
     for ( i = 0; i < entries; ++i )
    
 
-        printf("Word: \"%s\" \t Definition: \"%s\"\n", dictionary[i].word, dictionary[i].definition );
+        printf("Word: \"%s\"\t  Definition: \"%s\"\n", dictionary[i].word, dictionary[i].definition );
 
         printf("\n");
 
@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-int dicionarySort ( struct entry dictionary[], const int entries )
+int dicionarySort ( struct entry dictionary[], int entries )
 {
  int i,j;
 
