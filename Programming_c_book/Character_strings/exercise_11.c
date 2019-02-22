@@ -7,7 +7,7 @@
 
 int strToInt (const char str[])
 {
-    int i, intValue, result = 0, posResult = 0;
+    int i, intValue, result = 0, posResult = 0; 
     int negative;
      
     if (str[0] == '-')
