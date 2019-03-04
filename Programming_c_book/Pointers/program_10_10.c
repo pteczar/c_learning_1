@@ -3,7 +3,7 @@ struct entry *findEntry (struct entry *listPtr, int match);
 struct entry
 {
     int value;
-    struct entry *next;
+    struct entry *next; 
 };
 
 int main(int argc, char const *argv[])
