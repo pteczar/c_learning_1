@@ -22,8 +22,8 @@ int main(int argc, char const *argv[])
 
 void copyString (char *to, char *from)
 {
-    for ( *to ;  *from != '\0';  ++from, ++to )
-        *to = *from;
+    while (*from)
+        *to++ = *from++;
 
         *to = '\0';
 }
