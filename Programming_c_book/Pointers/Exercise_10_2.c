@@ -32,6 +32,6 @@ int main(int argc, char const *argv[])
 
 int insertEntry (struct entry n4)
 {
- n4.value = 400
+ n4.value = 400;
 
 }

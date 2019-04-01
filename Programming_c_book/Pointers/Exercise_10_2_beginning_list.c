@@ -1,19 +1,56 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-struct entry
+struct Node
 {
-    int value;
-    struct entry *next;
+    int data;
+    struct Node *next;
 };
 
-void insertEntry (struct entry ** head_ref, int newEntry )
+void InsertEntry (int x);
+void PrintEntry();
+
+//declaring the head
+
+struct Node* head; // global variable
+
+int main(int argc, char const *argv[])
 {
-    struct entry* newData = (struct entry*) malloc (sizeof(struct entry));
+    head = NULL; // list is empty at the beginning
 
-    newEntry.value = newData;
-    newEntry.next = (*head_ref);
-    (*head_ref) = newEntry;
+    printf("How many numbers?\n");
+    int n, i, x;
+    scanf("%d", &n);
 
+    for(size_t i = 0; i < n; i++)
+    {
+        printf("Enter the number\n");
+        scanf("%d",&x);
+        InsertEntry(x);
+        PrintEntry();
+    }
+
+    return 0;
 }
+
+void InsertEntry (int x)
+{
+    Node* temp = (Node*)malloc(sizeof(struct Node)); // creating a node
+    temp->data = x;
+    temp->next = NULL;
+    if(head != NULL) temp->next = head;
+    head = temp;
+}
+
+void PrintEntry ()
+{
+    struct Node* temp = head;
+    printf("List is: ");
+    while(temp != NULL)
+    {
+        printf(" %d", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
