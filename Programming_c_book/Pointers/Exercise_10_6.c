@@ -8,7 +8,8 @@ struct entry
     struct entry *previous;
     struct entry *next;
 };
-
+void insertBefore (struct entry *insertion, struct entry *next);
+void insertAfter (struct entry *insertion, struct entry *previous);
 void printDoubleList ( struct entry *ptr);
 int main(int argc, char const *argv[])
 {
@@ -50,3 +51,35 @@ void printDoubleList ( struct entry *ptr)
         
     printf ("%i\n", ptr->value);
 }
+
+
+void insertBefore (struct entry *insertion, struct entry *next)
+{
+	struct entry *previous = next->previous;
+
+	if ( previous != NULL {
+		previous->next = insertion;
+	}
+
+	next->previous = insertion;
+
+	insertion->previous = previous;
+	insertion->next     = next;
+}
+
+void insertAfter (struct entry *insertion, struct entry *previous)
+{
+	struct entry *next = previous->next;
+
+	if ( next != NULL {
+		next->previous  = insertion;
+	}
+
+	previous->next = insertion;
+
+	insertion->previous = previous;
+	insertion->next     = next;
+}
+
+
+
