@@ -30,6 +30,17 @@ int main(int argc, char const *argv[])
 
     
     printDoubleList(&n1);
+   
+    struct entry n9 = { .value = 9 };
+	insertBefore (&n9, &n1);
+	printDoubleList (&n1);
+
+	struct entry n8 = { .value = 8 };
+	insertAfter (&n8, &n3);
+	printDoubleList (&n1);
+
+
+
 
     return 0;
 }
@@ -50,6 +61,8 @@ void printDoubleList ( struct entry *ptr)
     }
         
     printf ("%i\n", ptr->value);
+
+    printf("\n");
 }
 
 
@@ -57,7 +70,8 @@ void insertBefore (struct entry *insertion, struct entry *next)
 {
 	struct entry *previous = next->previous;
 
-	if ( previous != NULL {
+	if ( previous != NULL) 
+    {
 		previous->next = insertion;
 	}
 
@@ -71,7 +85,8 @@ void insertAfter (struct entry *insertion, struct entry *previous)
 {
 	struct entry *next = previous->next;
 
-	if ( next != NULL {
+	if ( next != NULL) 
+    {
 		next->previous  = insertion;
 	}
 
