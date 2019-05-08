@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-void showStruct(struct person p);
-
-int main()
-{
 	struct person {
 		char name[32];
 		int age;
 		float iq;
 	};
+	
+
+void showStruct(struct person p);
+
+int main()
+{
 	struct person author;
 
 	strcpy(author.name,"Dan Gookin");

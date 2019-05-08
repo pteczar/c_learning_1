@@ -4,7 +4,7 @@
 
 #define SIZE 10
 
-void populate(int a[]);
+void populate(int *a);
 void showArray(int *a);
 void sortArray(int *a);
 
