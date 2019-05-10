@@ -7,19 +7,18 @@ struct person
     char name[64];
     int age;
 };
+struct person *allocateStruct(void);
 void fetchStruct(struct person *p);
 void showStruct(struct person *p);
 
 int main(int argc, char const *argv[])
 {
 
-    char author[64];
+  struct person *you;
 
-    printf("provide person's name: ");
-    fgets(author, sizeof(author),stdin);
-
-    struct person *author;
-    
+	you = allocateStruct();
+	fetchStruct(you);
+	showStruct(you);
     
     return 0;
 }
@@ -28,16 +27,31 @@ int main(int argc, char const *argv[])
 
 void fetchStruct(struct person *p)
 {
-	strcpy(p->name,"Dan Gookin");
-	p->age = 54;
-	
+	printf("Type your name: ");
+	scanf("%s",p->name);
+
+	printf("Type your age: ");
+    scanf("%d",&p->age);
 }
 
 void showStruct(struct person *p)
 {
-	printf("Author %s is %d years old\n",
+	printf("%s is %d years old\n",
 			p->name,
 			p->age);
 
 			
+}
+
+struct person *allocateStruct(void)
+{
+	struct person *p;
+
+	p = (struct person *)malloc(sizeof(struct person));
+	if( p == NULL)
+	{
+		perror("Unable to allocate structure");
+		exit(1);
+	}
+	return(p);
 }
